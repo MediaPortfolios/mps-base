@@ -1,0 +1,177 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+
+ /**
+  * PLUGINS
+  * 
+  * For the installed plugins and the add new plugins screens.
+  */
+
+/* This provides better distinction between active and inactive plugins. */
+.plugins {
+
+    tr.inactive *,
+    .plugins a.delete {
+        background: #f3f3f3;
+        color: #777777;
+    }
+
+    tr.inactive .activate a:hover {
+        color: #76a91d;
+    }
+
+    tr.active .deactivate a:hover,
+    tr.inactive .delete a:hover {
+        color: #aa0000;
+    }
+
+    a.delete:hover {
+        color: #aa0000 !important;
+    }
+
+}
+
+.row-actions {
+
+    span.delete a {
+        background: #f3f3f3;
+        color: #777777;
+    }
+
+    span.delete a:hover {
+        color: #aa0000 !important;
+    }
+
+}
+
+/**
+ * MEDIA
+ * 
+ * For the media library and media uploads screens.
+ */
+
+/* Fix SVGs not showing correctly as featured images. */
+#postimagediv .inside .svg img {
+    width: 100%;
+}
+
+/**
+ * JQUERY TABS
+ */
+.nav-tab-wrapper {
+    a {
+        .dashicons {
+            vertical-align: bottom;
+        }
+    }
+}
+
+.backend-tabbed-content > div {
+    max-width: 1200px;
+}
+
+.ui-tabs {
+    /* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
+    position: relative;
+    padding: 0;
+    
+    .ui-tabs-nav {
+        margin: 0;
+        padding: 0;
+        padding: 9px 0 0 .4em;
+        border-bottom: 1px solid #ccc;
+
+        h2 {
+            margin: 0;
+            padding: 0;
+            line-height: 1;
+        }
+
+        li {
+            display: inline-block;
+            list-style: none;
+            position: relative;
+            top: 1px;
+            margin: 0;
+            border-bottom-width: 0;
+            padding: 0;
+            white-space: nowrap;
+
+            a {
+                display: block;
+                border: 1px solid #ccc;
+                border-bottom: none;
+                margin: 1px .2em 0 0;
+                padding: 5px 10px;
+                font-size: 14px;
+                line-height: 24px;
+                background: #e5e5e5;
+                color: #555;
+                text-decoration: none;
+
+                .dashicons {
+                    vertical-align: bottom;
+                }
+            }
+
+        }
+
+        li.ui-tabs-active a,
+        li.ui-tabs-active a:focus,
+        li.ui-tabs-active a:focus:active,
+        li.ui-tabs-active a:active,
+        li.ui-tabs-active a:hover {
+            border-bottom: 1px solid #f1f1f1;
+            background: #f1f1f1;
+            -webkit-box-shadow: none;
+                    box-shadow: none;
+            color: #000;
+        }
+
+        li.ui-tabs-active .ui-tabs-anchor,
+        li.ui-state-disabled .ui-tabs-anchor,
+        li.ui-tabs-loading .ui-tabs-anchor {
+            cursor: pointer;
+        }
+    
+    }
+
+    .ui-tabs-nav ~ div {
+        clear: both;
+    }
+
+    .ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor {
+        cursor: pointer;
+    }
+
+    .ui-tabs-panel {
+        display: block;
+        border-width: 0;
+        padding: 1em 1.4em;
+        background: none;
+    }
+
+}
+
+/**
+ * MISCELLANEOUS
+ */
+
+/* Easily copy the code of registered ACF fields on the Registered Fields screen. */
+.import-registered-field-groups-arrays {
+    -webkit-user-select: all;
+    -moz-user-select: all;
+    -ms-user-select: all;
+    user-select: all;
+}
+
+/**
+ * Some of the unordered lists in the admin pages
+ * look better with bullets.
+ */
+.mpb_bullet-list {
+    list-style: disc;
+    margin-left: 1em;
+}
