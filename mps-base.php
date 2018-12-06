@@ -21,7 +21,7 @@
  * License URI:  https://www.gnu.org/licenses/gpl.txt
  * Text Domain:  mps-text
  * Domain Path:  /languages
- * Tested up to: 4.9.8
+ * Tested up to: 5.0.0
  */
 
 // If this file is called directly, abort.
